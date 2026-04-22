@@ -309,9 +309,3 @@ cd backend && venv\Scripts\activate && python app.py
 # Terminal 2
 cd frontend && npm start
 
-# === DAILY USE ===
-# Terminal 1
-cd backend && venv\Scripts\activate && python app.py
-
-# Terminal 2
-cd frontend && npm start
