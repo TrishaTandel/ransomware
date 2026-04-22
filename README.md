@@ -709,9 +709,10 @@ RESULT AGGREGATION
   risk ≥ 50  → verdict = "suspicious"
   risk ≥ 20  → verdict = "potentially_unwanted"
   risk < 20  → verdict = "clean"
-📈 ML MODEL TRAINING PIPELINE
+```
+# 📈 ML MODEL TRAINING PIPELINE
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               TRAINING PIPELINE (train_model.py)            │
 └─────────────────────────────────────────────────────────────┘
