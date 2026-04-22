@@ -43,9 +43,9 @@ text
 
 
 
-Frontend Frameworks
+# Frontend Frameworks
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │                    FRONTEND STACK                            │
 ├─────────────────────────────────────────────────────────────┤
@@ -84,9 +84,10 @@ text
 │  │  Purpose: Popup notification alerts                 │   │
 │  └─────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
-Security/Analysis Libraries
+```
+# Security/Analysis Libraries
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               SECURITY ANALYSIS LIBRARIES                    │
 ├─────────────────────────────────────────────────────────────┤
@@ -145,10 +146,11 @@ text
 │  │  Purpose: Save and load trained ML model to disk   │   │
 │  └─────────────────────────────────────────────────────┘   │
 └─────────────────────────────────────────────────────────────┘
-🤖 MACHINE LEARNING MODEL
+```
+# 🤖 MACHINE LEARNING MODEL
 Model Architecture
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │         GRADIENT BOOSTING CLASSIFIER (GBC)                  │
 │                sklearn.ensemble                              │
@@ -177,9 +179,10 @@ text
 │   │  Cross-Val Score:    ~95.8% (5-fold)             │     │
 │   └──────────────────────────────────────────────────┘     │
 └─────────────────────────────────────────────────────────────┘
-How Gradient Boosting Works
+```
+# How Gradient Boosting Works
 text
-
+```
 HOW GRADIENT BOOSTING WORKS (Step by Step)
 ═══════════════════════════════════════════
 
@@ -215,9 +218,10 @@ WHY GRADIENT BOOSTING FOR RANSOMWARE?
   ✓ Works well with small-to-medium datasets
   ✓ Less prone to overfitting than single decision trees
   ✓ Industry standard for tabular security data
-The 30 Features Used by ML Model
+```
+# The 30 Features Used by ML Model
 text
-
+```
 ┌────┬────────────────────────────┬──────────────────────────────────────┐
 │ #  │ Feature Name               │ What It Measures                      │
 ├────┼────────────────────────────┼──────────────────────────────────────┤
@@ -252,9 +256,10 @@ text
 │ 29 │ string_crypto_count        │ Count of crypto algorithm strings     │
 │ 30 │ string_extension_count     │ Count of targeted file extensions     │
 └────┴────────────────────────────┴──────────────────────────────────────┘
-Feature Importance (What Matters Most)
+```
+# Feature Importance (What Matters Most)
 text
-
+```
 FEATURE IMPORTANCE RANKING
 (Higher = More important for detection)
 ════════════════════════════════════════════════════════
@@ -271,11 +276,12 @@ Rank 9  │ has_anti_debug           █████                4.3%
 Rank 10 │ string_crypto_count      ████                 2.1%
 
 ═══════════════════════════════════════════════════════
+```
 KEY INSIGHT: Ransomware strings + high entropy +
              crypto API usage = strongest indicators
-Feature Preprocessing
+# Feature Preprocessing
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │              STANDARD SCALER (Preprocessing)                 │
 │           sklearn.preprocessing.StandardScaler               │
@@ -306,10 +312,11 @@ text
 │                                                             │
 │  After scaling: All features have mean=0, std=1            │
 └─────────────────────────────────────────────────────────────┘
-🔢 ALGORITHMS (All 7 Detection Layers)
+```
+# 🔢 ALGORITHMS (All 7 Detection Layers)
 Algorithm 1: Shannon Entropy
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               SHANNON ENTROPY ALGORITHM                      │
 │              (Information Theory, 1948)                      │
@@ -351,9 +358,10 @@ text
 │  → Normal text file entropy ≈ 4.0                          │
 │  → Random/encrypted data entropy ≈ 7.9-8.0                 │
 └─────────────────────────────────────────────────────────────┘
-Algorithm 2: Hash-Based Detection (SHA-256)
+```
+# Algorithm 2: Hash-Based Detection (SHA-256)
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               SHA-256 HASH ALGORITHM                         │
 │         (Cryptographic Hash Function, NIST 2001)             │
@@ -394,9 +402,10 @@ text
 │  → New/modified ransomware evades this check               │
 │  → That's why we use 6 other detection layers              │
 └─────────────────────────────────────────────────────────────┘
-Algorithm 3: YARA Pattern Matching
+```
+# Algorithm 3: YARA Pattern Matching
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               YARA PATTERN MATCHING                          │
 │              (Regex + Boolean Logic Engine)                  │
@@ -449,9 +458,10 @@ text
 │  → Packing detection (1 rule)                              │
 │  Total: 20+ YARA rules                                      │
 └─────────────────────────────────────────────────────────────┘
-Algorithm 4: PE Static Analysis
+```
+# Algorithm 4: PE Static Analysis
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               PE FILE STATIC ANALYSIS                        │
 │              (Heuristic Rule-Based Scoring)                  │
@@ -498,9 +508,10 @@ text
 │  Score >= 30 → High severity                                │
 │  Max score capped at 50                                     │
 └─────────────────────────────────────────────────────────────┘
-Algorithm 5: String Analysis
+```
+# Algorithm 5: String Analysis
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               STRING ANALYSIS ALGORITHM                      │
 │            (Pattern Matching + Regex Search)                 │
@@ -546,9 +557,10 @@ text
 │  TIME COMPLEXITY: O(n × m)                                  │
 │  n = file size, m = number of patterns                      │
 └─────────────────────────────────────────────────────────────┘
-Algorithm 6: Import Table Analysis
+```
+# Algorithm 6: Import Table Analysis
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │               IMPORT TABLE ANALYSIS                          │
 │           (API Call Graph Heuristics)                        │
@@ -596,9 +608,10 @@ text
 │  DeleteFile    → delete original (some ransomware)         │
 │  = COMPLETE RANSOMWARE FILE ENCRYPTION CYCLE               │
 └─────────────────────────────────────────────────────────────┘
-Algorithm 7: Heuristic Fallback Scoring
+```
+# Algorithm 7: Heuristic Fallback Scoring
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │          HEURISTIC SCORING (ML Fallback)                     │
 │      Used when ML model is not trained yet                   │
@@ -626,9 +639,10 @@ text
 │  confidence = min(score / 100.0, 1.0)                       │
 │  is_malware = confidence >= 0.5                             │
 └─────────────────────────────────────────────────────────────┘
-📊 COMPLETE SYSTEM ARCHITECTURE
+```
+# 📊 COMPLETE SYSTEM ARCHITECTURE
 text
-
+```
 ┌─────────────────────────────────────────────────────────────┐
 │                  COMPLETE SYSTEM MAP                         │
 └─────────────────────────────────────────────────────────────┘
@@ -747,9 +761,10 @@ Step 6: PERSISTENCE
   joblib.dump(scaler, 'feature_scaler.joblib')
   → Saved to backend/models/ directory
   → Loaded on server startup
-🔄 COMPLETE DATA FLOW
+```
+# 🔄 COMPLETE DATA FLOW
 text
-
+```
 USER UPLOADS test.exe
         │
         ▼
@@ -803,9 +818,10 @@ Analysis   Scan    Lookup    Analysis
         → Lists all threats
         → Shows detailed analysis
         → Toast notification
-📋 COMPLETE TECH STACK SUMMARY TABLE
+```
+# 📋 COMPLETE TECH STACK SUMMARY TABLE
 text
-
+```
 ┌─────────────────┬────────────────────┬──────────────────────────┐
 │ Category        │ Technology         │ Purpose                  │
 ├─────────────────┼────────────────────┼──────────────────────────┤
@@ -837,3 +853,4 @@ text
 │ DETECTION       │ API Heuristics     │ Import table analysis    │
 │ DETECTION       │ String Patterns    │ Ransom note detection    │
 └─────────────────┴────────────────────┴──────────────────────────┘
+```
