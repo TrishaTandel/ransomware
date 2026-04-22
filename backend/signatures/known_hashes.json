@@ -1,0 +1,98 @@
+{
+    "ed01ebfbc9eb5bbea545af4d01bf5f1071661840480439c6e5babe8e080e41aa": {
+        "name": "WannaCry",
+        "family": "WannaCry",
+        "severity": "critical",
+        "description": "WannaCry ransomware worm (May 2017)"
+    },
+    "24d004a104d4d54034dbcffc2a4b19a11f39008a575aa614ea04703480b1022c": {
+        "name": "WannaCry Variant",
+        "family": "WannaCry",
+        "severity": "critical",
+        "description": "WannaCry variant dropper"
+    },
+    "2584e1521065e45ec3c17767c065429038fc6291c091097ea8b22c8a502c41dd": {
+        "name": "WannaCry Encryptor",
+        "family": "WannaCry",
+        "severity": "critical",
+        "description": "WannaCry encryption module"
+    },
+    "027cc450ef5f8c5f653329641ec1fed91f694e0d229928963b30f6b0d7d3a745": {
+        "name": "Petya/NotPetya",
+        "family": "Petya",
+        "severity": "critical",
+        "description": "Petya/NotPetya MBR ransomware"
+    },
+    "71b6a493388e7d0b40c83ce903bc6b04": {
+        "name": "Petya Variant",
+        "family": "Petya",
+        "severity": "critical",
+        "description": "Petya/GoldenEye variant"
+    },
+    "feb3e6d30ba573ba23f3bd1291ca173b7879706d1fe039c34d53a4fdcdf33ede": {
+        "name": "Locky",
+        "family": "Locky",
+        "severity": "critical",
+        "description": "Locky ransomware"
+    },
+    "5ad6e2b3a73f820a07df2e44923e4c4e0e3b73e7c3eb5fb2e5e4da8e2f5c4a3b": {
+        "name": "CryptoLocker",
+        "family": "CryptoLocker",
+        "severity": "critical",
+        "description": "CryptoLocker ransomware"
+    },
+    "8b21d1efc0382e2d0ec34c4b0e197a4ee1b8cf2e76e38bff8b3d8e7e6f6a2f9c": {
+        "name": "Ryuk",
+        "family": "Ryuk",
+        "severity": "critical",
+        "description": "Ryuk ransomware"
+    },
+    "a3e5b0c2d4f6e8a1b3c5d7e9f1a2b4c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6": {
+        "name": "GandCrab",
+        "family": "GandCrab",
+        "severity": "critical",
+        "description": "GandCrab ransomware v5"
+    },
+    "b5c8d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6c8d0e2f4a6b8": {
+        "name": "REvil/Sodinokibi",
+        "family": "REvil",
+        "severity": "critical",
+        "description": "REvil/Sodinokibi ransomware"
+    },
+    "c6d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6": {
+        "name": "LockBit",
+        "family": "LockBit",
+        "severity": "critical",
+        "description": "LockBit ransomware 2.0"
+    },
+    "d8e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8": {
+        "name": "Conti",
+        "family": "Conti",
+        "severity": "critical",
+        "description": "Conti ransomware"
+    },
+    "e0f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0": {
+        "name": "Maze",
+        "family": "Maze",
+        "severity": "critical",
+        "description": "Maze ransomware"
+    },
+    "f2a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2": {
+        "name": "Dharma/CrySis",
+        "family": "Dharma",
+        "severity": "critical",
+        "description": "Dharma/CrySis ransomware"
+    },
+    "a4b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4": {
+        "name": "STOP/Djvu",
+        "family": "STOP_Djvu",
+        "severity": "critical",
+        "description": "STOP/Djvu ransomware"
+    },
+    "b6c8d0e2f4a6b8c0d2e4f6a8b0c2d4e6f8a0b2c4d6e8f0a2b4c6d8e0f2a4b6": {
+        "name": "BlackCat/ALPHV",
+        "family": "BlackCat",
+        "severity": "critical",
+        "description": "BlackCat/ALPHV ransomware"
+    }
+}

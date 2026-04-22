@@ -1,0 +1,29 @@
+2026-04-22 13:29:36,313 - scanner - INFO - Loaded 16 known hashes
+2026-04-22 13:29:36,314 - __main__ - INFO - Scanner initialized successfully
+2026-04-22 13:29:36,315 - ml_model - WARNING - No trained model found. Using heuristic fallback.
+2026-04-22 13:29:36,315 - __main__ - INFO - ML Model loaded successfully
+2026-04-22 13:29:36,378 - werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://10.10.3.194:5000
+2026-04-22 13:29:36,378 - werkzeug - INFO - [33mPress CTRL+C to quit[0m
+2026-04-22 13:29:36,381 - werkzeug - INFO -  * Restarting with stat
+2026-04-22 13:29:38,617 - scanner - INFO - Loaded 16 known hashes
+2026-04-22 13:29:38,617 - __main__ - INFO - Scanner initialized successfully
+2026-04-22 13:29:38,618 - ml_model - WARNING - No trained model found. Using heuristic fallback.
+2026-04-22 13:29:38,618 - __main__ - INFO - ML Model loaded successfully
+2026-04-22 13:29:38,637 - werkzeug - WARNING -  * Debugger is active!
+2026-04-22 13:29:38,642 - werkzeug - INFO -  * Debugger PIN: 139-186-554
+2026-04-22 13:31:40,675 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:31:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-22 13:31:40,682 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:31:40] "GET /api/stats HTTP/1.1" 200 -
+2026-04-22 13:31:40,699 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:31:40] "GET /api/history HTTP/1.1" 200 -
+2026-04-22 13:31:40,908 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:31:40] "GET /api/health HTTP/1.1" 200 -
+2026-04-22 13:31:41,023 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:31:41] "GET /api/history HTTP/1.1" 200 -
+2026-04-22 13:31:41,028 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:31:41] "GET /api/stats HTTP/1.1" 200 -
+2026-04-22 13:32:02,676 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:32:02] "OPTIONS /api/scan HTTP/1.1" 200 -
+2026-04-22 13:32:03,120 - __main__ - INFO - File saved for scanning: prog2.exe (58380 bytes)
+2026-04-22 13:32:03,526 - __main__ - INFO - Scan complete: prog2.exe -> potentially_unwanted (risk: 30)
+2026-04-22 13:32:03,530 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:32:03] "POST /api/scan HTTP/1.1" 200 -
+2026-04-22 13:32:03,539 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:32:03] "GET /api/stats HTTP/1.1" 200 -
+2026-04-22 13:32:03,845 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:32:03] "GET /api/history HTTP/1.1" 200 -
+2026-04-22 13:32:10,663 - werkzeug - INFO - 127.0.0.1 - - [22/Apr/2026 13:32:10] "GET /api/health HTTP/1.1" 200 -
