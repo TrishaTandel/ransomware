@@ -18,6 +18,7 @@ Open VS Code → Click Extensions icon (Ctrl+Shift+X) → Search and install eac
 ```
 
 #	Extension Name	Extension ID	Purpose
+```
 1	Python	ms-python.python	Python language support
 2	Pylance	ms-python.vscode-pylance	Python IntelliSense
 3	Python Debugger	ms-python.debugpy	Debug Python
@@ -32,24 +33,23 @@ Open VS Code → Click Extensions icon (Ctrl+Shift+X) → Search and install eac
 12	Auto Rename Tag	formulahendry.auto-rename-tag	HTML/JSX tags
 13	Bracket Pair Color	Built-in (enable in settings)	Bracket matching
 14	Path Intellisense	christian-kohler.path-intellisense	File path completion
-Step-by-Step Instructions
+```
+# Step-by-Step Instructions
 STEP 1: Clone or Create the Project
 Bash
 
-# Option A: Clone the repo
-git clone https://github.com/TrishaTandel/ransomeware-detection-system.git
-cd ransomeware-detection-system
-
-# Option B: Create fresh (if starting from scratch)
+Create fresh (if starting from scratch)
+```
 mkdir ransomware-detection-system
 cd ransomware-detection-system
-mkdir -p backend/yara_rules backend/signatures backend/models backend/uploads
-mkdir -p frontend
+mkdir backend
+mkdir frontend
+```
 Now copy ALL the files above into their correct locations.
 
-STEP 2: Setup Backend (Python)
+# STEP 2: Setup Backend (Python)
 Bash
-
+```
 # Navigate to backend folder
 cd backend
 
@@ -88,26 +88,19 @@ pip install yara-python-wheel
 # Or install without YARA (system will still work):
 # The system falls back to non-YARA scanning
 If yara-python installation fails:
+```
 
+# STEP 3: Train the ML Model
 Bash
-
-# Windows: Install Visual Studio Build Tools first
-# Download from: https://visualstudio.microsoft.com/visual-cpp-build-tools/
-# Check "Desktop development with C++" during installation
-# Then retry: pip install yara-python
-
-# Alternative: Skip YARA (the system works without it)
-# The scanner will use all other detection methods
-STEP 3: Train the ML Model
-Bash
-
+```
 # Make sure you're in the backend folder with venv activated
 cd backend
 
 # Run the training script
 python train_model.py
-Expected output:
-
+```
+## Expected output:
+```
 text
 
 ============================================================
@@ -141,16 +134,18 @@ text
 ============================================================
   Training Complete! You can now start the server.
 ============================================================
-STEP 4: Start the Backend Server
+```
+# STEP 4: Start the Backend Server
 Bash
-
+```
 # Make sure you're in backend folder with venv activated
 cd backend
 python app.py
-Expected output:
+```
+## Expected output:
 
 text
-
+```
 ============================================================
   RANSOMWARE DETECTION SYSTEM - Backend Server
 ============================================================
@@ -161,26 +156,29 @@ text
 ============================================================
  * Running on http://0.0.0.0:5000
 Leave this terminal running! Open a NEW terminal for the frontend.
+```
 
-STEP 5: Setup Frontend (React)
+# STEP 5: Setup Frontend (React)
 Bash
-
+```
 # Open a NEW terminal window
 cd frontend
 
 # Install Node.js dependencies
 npm install
 If npm install shows warnings, that's normal. Only errors matter.
+```
 
-STEP 6: Start the Frontend
+# STEP 6: Start the Frontend
 Bash
-
+```
 # Still in frontend folder
 npm start
-Expected output:
+```
+## Expected output:
 
 text
-
+```
 Compiled successfully!
 
 You can now view ransomware-detection-frontend in the browser.
@@ -188,8 +186,10 @@ You can now view ransomware-detection-frontend in the browser.
   Local:            http://localhost:3000
   On Your Network:  http://192.168.x.x:3000
 Your browser should open automatically to http://localhost:3000
+```
 
-STEP 7: Test the System
+# STEP 7: Test the System
+```
 Open browser: Go to http://localhost:3000
 Check status: Top right should show "System Online" with green dot
 Upload a file:
@@ -197,12 +197,14 @@ Click the upload area or drag-and-drop an .exe file
 Click "🔍 Start Scan"
 View results: See the detailed analysis with verdict, risk score, and threats
 Testing with Sample Files
-To test ransomware detection, you can:
+```
+## To test ransomware detection, you can:
 
 Option A: Create a Test File (Harmless)
 Bash
 
 # Create a test file that will trigger some detections
+```
 python -c "
 data = b'MZ' + b'\x00'*58 + b'\x80\x00\x00\x00'  # PE header start
 data += b'your files have been encrypted'
@@ -214,17 +216,19 @@ with open('test_ransomware.exe', 'wb') as f:
     f.write(data + b'\x00' * 1000)
 print('Test file created: test_ransomware.exe')
 "
+```
 Option B: Download EICAR Test File
 text
-
+```
 Download from: https://www.eicar.org/download-anti-malware-testfile/
 This is a standard anti-malware test file (completely harmless)
+```
 Option C: Use Any .exe File
 Scan any legitimate .exe file to verify it comes back as "clean"
 Example: Copy notepad.exe from C:\Windows\notepad.exe
-🔍 HOW THE DETECTION WORKS
+# 🔍 HOW THE DETECTION WORKS
 text
-
+```
 ┌─────────────────────────────────────────────┐
 │              FILE UPLOADED                    │
 └─────────────────┬───────────────────────────┘
@@ -258,6 +262,7 @@ text
         │ FINAL VERDICT  │
         │ + Risk Score   │
         └────────────────┘
+```
 Scan Layer	What It Checks
 Static Analysis	PE headers, sections, timestamps, packing indicators
 YARA Rules	20+ rules matching known ransomware families (WannaCry, Petya, Locky, etc.)
@@ -281,7 +286,9 @@ Summary of Commands (Quick Reference)
 Bash
 
 # === FIRST TIME SETUP ===
+```
 # Terminal 1 - Backend
+
 cd backend
 python -m venv venv
 venv\Scripts\activate          # Windows
@@ -294,7 +301,7 @@ python app.py                  # Start server
 cd frontend
 npm install                    # Install packages (run once)
 npm start                      # Start React app
-
+```
 # === DAILY USE ===
 # Terminal 1
 cd backend && venv\Scripts\activate && python app.py
